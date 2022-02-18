@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>input1</title>
+    </head>
+    <body>
+        <h1>어서오세요.</h1>
+
+        <script>
+            var name = prompt("입력창 오픈.");
+            let date = new Date();
+
+            let year = date.getFullYear(); //년도
+            let month = date.getMonth(); //월
+            let dat = date.getDate(); //일
+            let day = date.getDay(); // 요일
+
+            document.write("<b><big>" + name + "</big></b> 님");
+            document.write("<b><big>" + year + "/" + month + "/" + dat + "/" + day + "</bing></b>");
+        </script>
+    </body>
+</html>
