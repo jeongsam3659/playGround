@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>할인 가격 계산</title>
+    </head>
+    <body>
+        <form action="">
+            <span>원래 가격 :</span>
+            <input type="number" id="oPrice" />
+
+            <span>할인율 :</span>
+            <input type="number" id="rate" />
+
+            <input type="button" id="cal" value="할인 가격 계산." />
+        </form>
+
+        <script>
+            function showPrice() {
+                const originPrice = document.querySelector("#oPrice").value;
+                const rate = document.querySelector("#rate").value;
+
+                let savedPrice = originPrice * (rate / 100);
+                let resultPrice = originPrice - savedPrice;
+
+                document.querySelector("#showResult").innerHTML =
+                    "상품의 원래 가격은 " + originPrice + " 원이고, 할인율은 " + rate + "%입니다." + savedPrice + "원을 절약한 " + resultPrice + "원에 살 수 있습니다.";
+            }
+        </script>
+    </body>
+</html>
