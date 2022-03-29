@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>flowchart</title>
+    </head>
+    <body>
+        <script>
+            // 예제 28
+            // 최대공약수
+            // 1. i값이 v1부터 1씩 감소하며 1까지 반복.
+            // 2. v1을 i을 나눈 나머지가 0이고 v2로 i로 나눈 나머지가 0인지 판별
+            // 3. 최대공약수 i를 출력하고 반복구조를 빠져나온다.
+            var v1 = parseInt(prompt("정수 1", 0));
+            var v2 = parseInt(prompt("정수 2", 0));
+
+            for (var i = v1; i >= 1; i--) {
+                if (v1 % i == 0 && v2 % 2 == 0) {
+                    document.write(i, " ");
+                    break;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 거리에 따른 요금을 출력하는 JS
+            let km = parseInt(prompt("거리", 0));
+            let cost;
+
+            if (km < 5) {
+                document.write("요금제 : 1000");
+            } else if (km < 10) {
+                document.write("요금제 : 2000");
+            } else {
+                document.write("요금제 : 3000");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+
+//예제13) 홀짝 판별기
+let in_a = parseInt(prompt("숫자를 넣으세요.",0));
+if (in_a % 2 == 0) {
+    document.write("짝수입니다.");
+} else {
+    document.write("홀수 입니다.");
+}
+
+
+//예제14) 3배수 판별기
+let in_a = parseInt(prompt("숫자를 넣으세요.", 0));
+if (in_a % 3 == 0) {
+    document.write("3의 배수입니다.");
+} else {
+    document.write("아닙니다.");
+}
+
+
+//예제15) 입장료
+const charge = 5000;
+let age;
+age = parseInt(prompt("나이를 입력하세요."));
+    if (age < 8) {
+        document.write("입장료 : 0 원");
+    } else if (age < 60) {
+        document.write("입장료 :" + charge);
+    } else {
+        document.write("입장료 :" + charge * 0.5);
+    }
+
+ 
+//예제16) 3의배수 이면서 5의배수
+let int_a = parseInt(prompt("3의배수인가 5의배수인가?", 0));
+ if (int_a % 3 == 0 && int_a % 5 == 0) {
+    document.write("3의배수이면서 5의배수입니다.");
+} else {
+    document.write("둘다 아닙니다.");
+}
+
+
+// 예제17) 나이에 따른 공원 입장료
+// 나이가 8이상 60 미만일경우 5000 나머진 무료
+var age = parseInt(prompt("나이", 0));
+
+if (age < 8 || age > 60) {
+    document.write("무료");
+} else {
+    document.write("입장료: 5000");
+}
+
+
+--- 반복 ---
+// 일반반복
+count = 1;
+while (count <= 5) {
+    document.write("*");
+    count += 1;
+}
+
+for (var i = 0; i < 5; i++) {
+    document.write("*");
+}
+
+
+// 중첩반복 
+for (var i = 0; i <= 2; i++) {
+    for (var j = 0; j <= 3; j++) {
+        document.write(i, j);
+        document.write("\n");
+    }
+}
+
+
+//예제20
+// 1-10까지 / 10-1까지
+for(var i=1; i<=10; i++)
+for(var i=10; i>=i; i--)
+
+
+//예제21
+// 1~100까지 합.
+var sum = 0;
+for (var i = 1; i < 100; i++) {
+     sum += i;
+}
+document.write(sum);
+
+
+//예제22
+// 1~100 짝수의 합.
+var sum = 0;
+for (var i = 1; i <= 100; i++) {
+    if (i % 2 == 0) {
+        sum += i;
+    }
+}
+document.write(sum);
+
+
+//예제23
+// 홀수 + 짝수 - 1~100까지 진행
+var sum = 0;
+for (var i = 1; i <= 100; i++) {
+    if (i % 2 == 0) {
+        sum -= i;
+    } else {
+        sum += i;
+    }
+}
+document.write(sum);
+
+
+//에제25)
+// 5! 팩토리얼 1*2*3*4*5
+var chat = 1;
+for (var i = 5; i >= 1; i--) {
+    chat *= i;
+}
+document.write(chat);
+
+
+// 예제 26
+// 약수구하기.
+// %i =0이면 출력 아니면 패스.
+var n = parseInt(prompt("약수를 구할 수를 넣으세요."));
+for (var i = 1; i <= n; i++) {
+    if (n % i == 0) {
+        document.write(i, " ");
+    }
+}
+
+
+// 예제27
+// 공약수 구하기.
+// 두 정수를 나누어 떨어지게 하는 공통의 수
+var v1 = parseInt(prompt("정수 1", 0));
+var v2 = parseInt(prompt("정수 2", 0));
+for (var i = 1; i <= v1; i++) {
+    if (v1 % i == 0 && v2 % 2 == 0) {
+        document.write(i, " ");
+    }
+}
