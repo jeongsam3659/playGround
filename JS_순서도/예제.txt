@@ -141,3 +141,85 @@ for (var i = 1; i <= v1; i++) {
         document.write(i, " ");
     }
 }
+
+
+// 예제 28
+// 최대공약수
+// 1. i값이 v1부터 1씩 감소하며 1까지 반복.
+// 2. v1을 i을 나눈 나머지가 0이고 v2로 i로 나눈 나머지가 0인지 판별
+// 3. 최대공약수 i를 출력하고 반복구조를 빠져나온다.
+var v1 = parseInt(prompt("정수 1", 0));
+var v2 = parseInt(prompt("정수 2", 0));
+
+for (var i = v1; i >= 1; i--) {
+    if (v1 % i == 0 && v2 % 2 == 0) {
+        document.write(i, " ");
+        break;
+        }
+}
+
+
+// 예제29 소수판별기
+// 소수 : 자기자신 이외의 양의 약수를 가지지 않는 1보다 자연수.
+// 자기자신보다 1 작은 수까지의 수로 차례로 나눠떨어지는 경우. 소수 X
+//                                   나눠떨어지지않는 경우. 소수 O
+let n = parseInt(prompt("n 입력:", 0));
+let chk = 1;
+
+for (var i = 2; i <= n - 1; i++) {
+    if (n % i == 0) {
+        chk = 0;
+        reak;
+    }
+}
+if (chk == 1) {
+    document.write(n, ": 소수");
+} else {
+    document.write(n, ": 소수 아님");
+}
+
+
+//예제30
+// 피보나치 수열
+// 1 1 2 3 5 8 13 21...
+// 두번째항 이후 이전 항 두개를 더해 3번째항을 구해진다.
+let a = 1;
+let b = 1;
+let c;
+
+for (var i = 3; i <= 20; i++) {
+    c = a + b;
+    document.write(c, " ");
+    a = b;
+    b = c;
+}
+
+
+// 예제 31 최댓값 구하기
+// max값과 입력값을 비교하여 클시 max값에 입력값을 저장.
+// 0 을 입력시 반복문 중단.
+let max = 1;
+let a = parseInt(prompt("입력값 : "), 0);
+
+while (a != 0) {
+    if (a > max) {
+        max = a;
+    }
+
+    a = parseInt(prompt("다음 입력값 :"), 0);
+}
+document.write("최대값은 :", max);
+
+
+// 예제 32 직각삼각형 모양 출력
+// 1
+// 12
+// 123 ...
+let in_number = parseInt(prompt("정수 입력 :", 0));
+
+for (let i = 1; i <= in_number; i++) {
+    for (let j = 1; j <= i; j++) {
+        document.write(j, " ");
+    }
+    ocument.write("<br>");
+}

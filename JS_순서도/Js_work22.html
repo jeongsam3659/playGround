@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>22</title>
+    </head>
+    <body>
+        <div>1부터 자기 자신까지의 수로 차례로 나눠떨어지는 경우가 2번 발생하면 이 수는 소수이고, 그렇지 않으면 소수가 아니다.</div>
+
+        <script>
+            let in_number = parseInt(prompt("정수입력 :", 0));
+            let chek = 0;
+            for (var i = 1; i <= in_number; i++) {
+                if (in_number % i == 0) {
+                    chek += 1;
+                    console.log("i =", i);
+                    console.log("chek =", chek);
+                }
+            }
+
+            if (chek == 2) {
+                document.write(in_number, ": 소수");
+            } else {
+                document.write(in_number, ": 소수아님");
+            }
+        </script>
+    </body>
+</html>
