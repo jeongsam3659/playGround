@@ -223,3 +223,140 @@ for (let i = 1; i <= in_number; i++) {
     }
     ocument.write("<br>");
 }
+
+
+
+// 예제 34  1~100 사이중 소수 구하기.
+let chk;
+for (let i = 2; i <= 100; i++) {
+    chk = 1;
+    for (let j = 2; j <= i - 1; j++) {
+        if (i % j == 0) {
+            chk = 0;
+            break;
+        }
+    }
+if (chk == 1) {
+    document.write(i, " ");
+    }
+}
+
+
+// 예제 37 !~10까지 수 저장하고 출력
+let a = [];
+for (var i = 1; i <= 10; i++) {
+    a[i - 1] = i;
+}
+document.write(a);
+// 로꾸거
+let reverse_a = [];
+for (var i = 10; i >= 1; i--) {
+    reverse_a[10 - i] = i;
+}
+document.write(reverse_a);
+
+
+// 예제39 배열 요소 뒤집기.
+let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let tmp;
+
+for (let i = 0; i <= 4; i++) {
+    tmp = a[i];
+    a[i] = a[9 - i];
+    a[9 - i] = tmp;
+}
+document.write(a);
+
+
+// 역순
+ var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ var b = [];
+
+for (var i = 0; i <= 9; i++) {
+    b[i] = a[9 - i];
+}
+document.write(b);
+
+
+// 예제 41 배열 요소 왼쪽으로 한 칸씩 원형으로 이동.
+let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let tmp;
+
+tmp = a[0]; //배열 0번째 요소 임시저장.
+for (var i = 0; i <= 8; i++) {
+    a[i] = a[i + 1];
+}
+a[9] = tmp; // 임시저장을 배열 마지막에 다시저장.
+document.write(a);
+
+
+
+// 예제 42 배열 최대값 .
+//  a(0)값을 Max로 저장하고 , i가 1부터 1씩 증가하며 9가 될때까지 반복하며, a(i)값이 Max값보다 크면 a(i)값을 max에 저장.
+var a = [];
+var max;
+
+// 배열에 ~100 랜덤수 집어넣기
+for (var i = 0; i <= 9; i++) {
+    a[i] = Math.ceil(Math.random() * 100);
+ }
+// Math.ceil(올림)
+document.write(a, "<br>");
+
+max = a[0];
+for (var i = 1; i <= 9; i++) {
+    if (max < a[i]) {
+        max = a[i];
+        }
+    }
+document.write("최대값: ", max);
+
+//배열 최솟값 .
+var arr_one = [];
+var min;
+for (var i = 0; i <= 9; i++) {
+    arr_one[i] = Math.ceil(Math.random() * 100);
+}
+console.log(arr_one);
+
+min = arr_one[0];
+for (var i = 1; i <= 9; i++) {
+    if (min > arr_one[i]) {
+        min = arr_one[i];
+    }
+}
+document.write("최소값 :", min);
+
+
+
+// 예제 43 에라토스테네스의 체
+// 소수 찾는 법.
+// 시작수 2, 시작하여 2를 제외한 2의배수를 제외시킨다.
+// 시작수 3, 3를 제외한 3의 배수 제외.
+// 시작수 5, 5를 제외한 5의 배수 제외.
+// ...
+/*
+1. 배열 a의 모든 요소에 9을 저장.
+2. i값이 2부터 1씩 증가하며 100이 될 때까지 반복.
+3. a(i)가 0인지 판별
+
+4. j 값이 i *2부터 i씩 증가하며 100이 될 때까지 반복. 결국 j는 i를 제외한 i배수에 대해 반복.
+5. a(j)에 1을 저장. a(j)에 1이 저장되면 j는 소수가 아님을 의미.
+*/
+
+var a = [];
+for (var i = 0; i <= 100; i++) {
+    a[i] = 0;
+}
+for (var i = 2; i <= 100; i++) {
+    if (a[i] == 0) {
+        for (var j = i * 2; j <= 101; j = j + 1) {
+            a[j] = 1;
+        }
+    }
+}
+for (var i = 2; i <= 100; i++) {
+    if (a[i] == 0) {
+        document.write(i, " ");
+    }
+}
